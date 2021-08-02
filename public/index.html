@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dogeland - Buy, sell, trade doge meme inspired NFTs</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alex's Boiler Plate</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png" />
 
     <!-- Compiled and minified CSS -->
     <!-- Materialze-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
     <!-- Materialize icons-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <link href="styles.css" rel="stylesheet">
-</head>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="nav-wrapper" style=" background-color: #9E65A9;">
-                <a href="#" class="brand-logo" style="height: 100%;">
-                    <img src="assets/ale.jpg" alt="" class="circle responsive-img"
-                        style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
+  <body>
+    <nav class="blue darken-1">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">
+            <img src="assets/logo.png" alt="Logo" />
+            Dogeland
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="https://www.linkedin.com/in/alessiobonti">Linkedin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Marketplace</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
     <main>
-
-        <div class="container">
-            <h1 class="title">Alex NExUs</h1>
-            <div class="row">
-                <p class="flow-text mainText">This is a basic boilerplate i have created based on Node Express and
-                    Materialize, I hope it will help you develop your next project!</p>
+      <div class="container">
+        <div class="hero row">
+          <div class="col s12">
+            <div class="flow-text">
+              <h1>Welcome to Dogeland 🌏</h1>
+              <p>The largest marketplace for all your doge meme inspired NFTs. #ToTheMoon 🚀</p>
             </div>
-            <div class="row center" style="height: 150px;">
-                <img src="assets/ale2.jpg" alt="" class="circle responsive-img"
-                    style="height: 100%;padding-top: 5px; padding-left: 15px;"> <!-- notice the "circle" class -->
-            </div>
-            <div class="row center " style="padding-top:50px;">
-                <a id="testButton" class="waves-effect waves-light btn-large " style="background-color: #9E65A9;"><i
-                        class="material-icons left" style="color:white font-size:larger">emoji_people</i>Click me!</a>
-            </div>
+          </div>
         </div>
-
+        <div class="row">
+          <div class="col">
+            <h4>Services</h4>
+          </div>
+        </div>
+        <div class="row card-group">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Buy 💎</span>
+                <p>Choose from a large collection of NFTs and pay with your favorite cryptocurrency.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Sell 💸</span>
+                <p>You choose how you want to sell your NFTs, and we help you sell them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Trade 💱</span>
+                <p>Easily trade NFTs with people from all over the world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="page-footer">
-        <div class="footer-copyright">
-            <div class="container">
-                © 2020 Copyright AlexNexus
-                <a class="grey-text text-lighten-4 right" href="https://github.com/alexbonti/node-material"><img
-                        src="assets/git-logo.svg" style="height: 20px; padding-right: 15px;"></i>Boiler plate here !</a>
-            </div>
+
+    <footer class="page-footer blue darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Dogeland</h5>
+            <p class="grey-text text-lighten-4">Buy, sell, trade doge meme inspired NFTs. #ToTheMoon 🚀</p>
+          </div>
         </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">&copy; 2021 Made by Muhammad Arslan</div>
+      </div>
     </footer>
 
     <!-- socket IO Served by the server -->
@@ -73,7 +115,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="env.js"></script>
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

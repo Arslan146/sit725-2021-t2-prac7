@@ -1,26 +1,28 @@
-.helloInput {
-  width: 200px;
-}
-
-.title{
-  color: white;
-}
-.mainText{
-  color:white;
-}
-
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: #B783C3;
-
 }
 
-.page-footer{
-  background-color: #9E65A9;
-}
 main {
   flex: 1 0 auto;
+  margin-bottom: 40px;
 }
-    
+
+nav .brand-logo {
+  display: flex;
+  align-items: center;
+}
+.brand-logo img {
+  height: 64px;
+  margin-right: 10px;
+}
+
+.hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.card-group .card {
+  min-height: 150px;
+}
