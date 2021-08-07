@@ -1,5 +1,9 @@
-// Initialize sidenav
 document.addEventListener('DOMContentLoaded', function () {
-  const elems = document.querySelectorAll('.sidenav');
-  M.Sidenav.init(elems, {});
+  // Initialize sidenav
+  const sidenav = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(sidenav, {});
+
+  // Initialize modals
+  var modal = document.querySelectorAll('.modal');
+  M.Modal.init(modal, {});
 });

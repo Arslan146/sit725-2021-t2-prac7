@@ -41,3 +41,29 @@ nav .brand-logo {
   bottom: 0;
   right: 0;
 }
+
+.card .card-content .card-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: -5px;
+}
+
+#nprogress .bar {
+  background: #ffc107;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #ffc107, 0 0 5px #ffc107;
+}
+#nprogress .spinner-icon {
+  border-top-color: #ffc107;
+  border-left-color: #ffc107;
+}
+
+#toast-container {
+  top: auto !important;
+  bottom: 5%;
+}
+.toast {
+  top: 0 !important;
+}

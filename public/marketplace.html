@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/png" />
 
     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" />
     <!-- Materialze-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
 
@@ -46,30 +47,19 @@
     <main>
       <div class="container">
         <div class="hero row">
-          <div class="col s12">
+          <div class="col s10">
             <div class="flow-text">
               <h4>Marketplace 🛒</h4>
             </div>
           </div>
-        </div>
-        <div class="row card-group">
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image">
-                <div class="card-image__wrapper">
-                  <img
-                    src="https://lh3.googleusercontent.com/ezPl41_FRKo8sWXHlHwrOYVKcp23knkXRjjO4AzUd4FAHdOIYqQ0saRLPl24lXZhHYPcZj9R4ujalaTgROVjli-EJxh96mi3d_Ea=w263"
-                  />
-                </div>
-              </div>
-              <div class="card-content">
-                <span class="card-title">The Dogefather</span>
-                <p class="grey-text text-darken-1 valign-wrapper">
-                  <i class="material-icons">attach_money</i> 5.1203 DOGE
-                </p>
-              </div>
-            </div>
+          <div class="s2" style="margin-top: 20px">
+            <button class="waves-effect waves-light btn modal-trigger amber black-text" data-target="modalAddProduct">
+              <span class="valign-wrapper"><i class="material-icons">add</i>Add NFT</span>
+            </button>
           </div>
+        </div>
+        <div id="productList" class="row card-group">
+          <h6 class="center-align">No NFTs available</h6>
         </div>
       </div>
     </main>
@@ -88,11 +78,54 @@
       </div>
     </footer>
 
+    <div id="modalAddProduct" class="modal modal-fixed-footer">
+      <form id="formAddProduct">
+        <div class="modal-content">
+          <h4 style="margin-bottom: 30px">Sell your NFT</h4>
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <input placeholder="Doge meme" id="productName" type="text" required />
+                  <label for="productName">Name</label>
+                </div>
+                <div class="input-field col s4">
+                  <input placeholder="0.00" id="productPrice" type="text" required />
+                  <label for="productPrice">Price</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input placeholder="https://example.com/image.jpg" id="productImage" type="text" required />
+                  <label for="productImage">Image URL</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea
+                    placeholder="Write something about your NFT"
+                    id="productDesc"
+                    class="materialize-textarea"
+                  ></textarea>
+                  <label for="productDesc">Description</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="waves-effect waves-blue btn amber black-text">Add</button>
+          <button type="button" class="modal-close waves-effect btn-flat">Cancel</button>
+        </div>
+      </form>
+    </div>
+
     <!-- socket IO Served by the server -->
     <script src="/socket.io/socket.io.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/marketplace.js"></script>
