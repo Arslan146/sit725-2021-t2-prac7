@@ -20,7 +20,7 @@ const createProduct = (req, res) => {
  */
 const deleteProduct = (req, res) => {
   const { id } = req.params;
-  productsService.remove(ObjectId(id), res);
+  productsService.remove(parseInt(id) ?? ObjectId(id), res);
 };
 
 module.exports = {
