@@ -32,6 +32,11 @@
             <li><a href="/">Home</a></li>
             <li><a href="/marketplace.html">Marketplace</a></li>
             <li><a href="/contact.html">Contact</a></li>
+            <li>
+              <a href="/cart.html" class="waves-effect waves-light btn amber black-text">
+                Cart (<span id="cartItemCount">0</span>)
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -41,6 +46,11 @@
       <li><a href="/">Home</a></li>
       <li><a href="/marketplace.html">Marketplace</a></li>
       <li><a href="/contact.html">Contact</a></li>
+      <li>
+        <a href="/cart.html" class="waves-effect waves-light btn amber black-text">
+          Cart (<span id="cartItemCount">0</span>)
+        </a>
+      </li>
     </ul>
 
     <main>
@@ -69,6 +79,9 @@
         <div class="container">&copy; 2021 Made by Muhammad Arslan</div>
       </div>
     </footer>
+
+    <!-- socket IO Served by the server -->
+    <script src="/socket.io/socket.io.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

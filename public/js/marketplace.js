@@ -35,14 +35,15 @@ function renderProduct(item) {
         <div class="card-image__wrapper">
           <img src="${item.image || 'https://dummyimage.com/300x300'}" />
         </div>
-        <button data-id="${
-          item._id
-        }" class="btnDeleteProduct btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></button>
+        <button data-id="${item._id}" class="btnDeleteProduct btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></button>
       </div>
       <div class="card-content">
         <span class="card-title">${item.name || ''}</span>
         <p class="green-text card-price"><i class="material-icons">attach_money</i> ${item.price || 0} DOGE</p>
         <p class="grey-text">${item.description || ''}</p>
+      </div>
+      <div class="card-action">
+        <button type="button" onclick="cartAddItem('${encodeURIComponent(JSON.stringify(item))}')" class="btn waves-effect waves-light amber black-text">Add to cart</button>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dogeland - Buy, sell, trade doge meme inspired NFTs</title>
+    <title>Cart - Dogeland</title>
 
     <!-- Icon -->
     <link rel="shortcut icon" href="img/logo.png" type="image/png" />
@@ -55,45 +55,14 @@
 
     <main>
       <div class="container">
-        <div class="hero row">
-          <div class="col s12">
-            <div class="flow-text">
-              <h1>Welcome to Dogeland 🌏</h1>
-              <p>The largest marketplace for all your doge meme inspired NFTs. #ToTheMoon 🚀</p>
-            </div>
+        <div class="hero">
+          <div class="flow-text">
+            <h4>My cart 🛒</h4>
           </div>
         </div>
-        <div class="row">
-          <div class="col">
-            <h4>Services</h4>
-          </div>
-        </div>
-        <div class="row card-group">
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-content">
-                <span class="card-title">Buy 💎</span>
-                <p>Choose from a large collection of NFTs and pay with your favorite cryptocurrency.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-content">
-                <span class="card-title">Sell 💸</span>
-                <p>You choose how you want to sell your NFTs, and we help you sell them!</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-content">
-                <span class="card-title">Trade 💱</span>
-                <p>Easily trade NFTs with people from all over the world.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ul id="cartList" class="collection">
+          <h6 class="center-align">Your cart is empty</h6>
+        </ul>
       </div>
     </main>
 
@@ -118,5 +87,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
