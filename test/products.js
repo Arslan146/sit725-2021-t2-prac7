@@ -1,7 +1,7 @@
 const axios = require('axios');
 const chai = require('chai');
 
-describe('Products', function () {
+describe('Products', () => {
   const URL = 'http://localhost:8080/api/products';
 
   describe('GET /api/products', () => {
