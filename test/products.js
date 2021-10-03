@@ -3,6 +3,7 @@ const chai = require('chai');
 
 describe('Products', () => {
   const URL = 'http://localhost:8080/api/products';
+  let productId;
 
   describe('GET /api/products', () => {
     it('should return array of products', (done) => {
@@ -20,13 +21,13 @@ describe('Products', () => {
     it('should create product', (done) => {
       axios
         .post(URL, {
-          _id: 1,
           name: 'Test Product',
           price: 100,
           image: 'http://test.com/image.jpg',
           description: 'Test Description',
         })
         .then((response) => {
+          productId = response.data._id;
           chai.expect(response.status).to.equal(200);
           chai.expect(response.data).to.be.an('object');
           chai.expect(response.data).to.have.property('message').to.equal('NFT created');
@@ -38,7 +39,7 @@ describe('Products', () => {
   describe('DELETE /api/products/:id', () => {
     it('should delete product', (done) => {
       axios
-        .delete(URL + '/1')
+        .delete(URL + '/' + productId)
         .then((response) => {
           chai.expect(response.status).to.equal(200);
           chai.expect(response.data).to.be.an('object');

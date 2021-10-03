@@ -22,7 +22,10 @@ const insert = (data, res) => {
     if (err) {
       return res.status(500).json({ message: err.message });
     }
-    res.json({ message: 'NFT created' });
+    res.json({
+      _id: data._id,
+      message: 'NFT created',
+    });
   });
 };
 
